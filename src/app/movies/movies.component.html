@@ -38,12 +38,14 @@
                 >
                   <div class="title">
                     <p class="fw-bold fs-4 pt-2">
-                      {{ movie.title ? movie.title : movie.name }}
+                      {{
+                        (movie.title ? movie.title : movie.name).split(":")[0]
+                      }}
                     </p>
                   </div>
                   <div class="overview">
                     <p>
-                      {{ movie.overview.split(" ").slice(0, 20).join(" ") }}...
+                      {{ movie.overview.split(" ").slice(0, 9).join(" ") }}...
                     </p>
                   </div>
                 </div>
@@ -100,13 +102,9 @@ movie.id) {
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered modal-lg">
-
     <div class="container">
-
-      <div class="card position-relative rounded-3  text-white">
-
+      <div class="card position-relative rounded-3 text-white">
         <div class="row">
-
           <div class="col-lg-6 pe-lg-0">
             <div class="card-img position-relative">
               <img
@@ -121,8 +119,17 @@ movie.id) {
               }
             </div>
           </div>
-          <div class="col-lg-6 ps-lg-0 d-flex flex-column justify-content-evenly ">
-            <button type="button" class=" text-white bg-transparent border-0 px-3 py-2 fs-3 " data-bs-dismiss="modal" aria-label="Close"><img src="images/close.png" alt=""></button>
+          <div
+            class="col-lg-6 ps-lg-0 d-flex flex-column justify-content-evenly"
+          >
+            <button
+              type="button"
+              class="bg-transparent border-0 px-3 py-2 fs-3"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <img src="images/close.png" alt="" />
+            </button>
             <div class="title">
               <p class="fw-bold fs-4 pt-2 ps-3">
                 {{ movie.title ? movie.title : movie.name }}
