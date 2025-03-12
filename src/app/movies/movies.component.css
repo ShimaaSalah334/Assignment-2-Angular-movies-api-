@@ -1,35 +1,5 @@
 .movie-carousel {
-  padding: 100px 0px;
-}
-.carousel-control-prev img,
-.carousel-control-next img {
-  width: 55px;
-  height: 55px;
-  filter: drop-shadow(15px 15px 4px rgba(0, 0, 0, 0.25));
-  -webkit-filter: drop-shadow(15px 15px 4px rgba(0, 0, 0, 0.25));
-}
-.carousel button {
-  opacity: 1;
-  width: auto;
-  position: relative;
-}
-.carousel-control-next {
-  right: 20px;
-}
-.carousel-control-prev {
-  left: 20px;
-}
-.carousel{
-  height: 800px;
-}
-
-.carousel-item {
-  transition: transform 1s ease-in-out;
-  -webkit-transition: transform 1s ease-in-out;
-  -moz-transition: transform 1s ease-in-out;
-  -ms-transition: transform 1s ease-in-out;
-  -o-transition: transform 1s ease-in-out;
-
+  padding: 100px 20px;
 }
 
 .card {
@@ -44,7 +14,7 @@
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
 }
-.carousel .card:hover {
+.movie-carousel .card:hover {
   transform: scale(1.05);
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
@@ -55,7 +25,9 @@
 .fs-5 {
   line-height: 1;
 }
-
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .modal button {
   text-align: right;
   cursor: pointer;
@@ -67,14 +39,6 @@
   height: 15px;
 }
 
-@media screen and (max-width: 767px) {
-  .carousel-control-next {
-    right: 0px;
-  }
-  .carousel-control-prev {
-    left: 0px;
-  }
-}
 @media screen and (max-width: 992px) {
   .modal button {
     position: absolute;
@@ -85,14 +49,3 @@
     filter: drop-shadow(15px 15px 4px rgba(0, 0, 0, 0.25));
   }
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -1,6 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
 
-body{
-  background-color: #2B2B2B;
-  overflow-x: hidden;
+body {
+  background-color: #2b2b2b;
+}
+.owl-stage {
+  padding: 40px 0px;
+}
+.owl-theme {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.owl-theme .owl-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+}
+
+.owl-theme .owl-nav .owl-next {
+  margin-right: -25px;
+}
+.owl-theme .owl-nav .owl-prev {
+  margin-left: -25px;
+}
+.owl-theme .owl-nav .owl-prev,
+.owl-theme .owl-nav .owl-next {
+  background-color: transparent;
+  pointer-events: auto;
+}
+.owl-theme .owl-nav .owl-prev:hover,
+.owl-theme .owl-nav .owl-next:hover {
+  background-color: transparent;
+}
+
+.owl-nav img {
+  width: 55px;
+  height: 55px;
+  filter: drop-shadow(15px 15px 4px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(15px 15px 4px rgba(0, 0, 0, 0.25));
 }
